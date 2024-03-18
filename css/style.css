@@ -1,0 +1,771 @@
+@import url('https://fonts.cdnfonts.com/css/noto-sans');
+@font-face {
+    font-family: 'DFHei';
+    src: url("../font/DFHeiStd-W5.otf") format('opentype');
+    font-weight: 500 !important;
+}
+@font-face {
+    font-family: 'DFMing';
+    src: url("../font/DFMingStd-W5.otf") format('opentype');
+    font-weight: 500 !important;
+}
+body {
+    font-family: 'DFHei', sans-serif;
+    background-color: #F8F7F6 !important;
+    background: #F8F7F6 !important;
+}
+h1{
+    color: #FFF;
+    font-family: 'DFHei', sans-serif;
+    font-size: 64px !important; 
+    font-weight: 500 !important;
+    text-align: center;
+}
+h2{
+    color: #FFF;
+    font-family: 'DFHei', sans-serif;
+    font-size: 42px !important; 
+    font-weight: 500 !important;
+    text-align: center;
+}
+h3{
+    font-family: 'DFHei', sans-serif;
+    font-size: 28px !important;
+    font-weight: 500 !important;
+    text-align: center;
+}
+p{
+    color: #FFF;
+    font-family: 'DFHei', sans-serif;
+    font-size: 18px !important;
+    font-style: normal;
+    line-height: 200% !important; /* 36px */
+    margin-bottom: 0 !important;
+}
+.font-left{
+    text-align: left;
+}
+.DFMing{
+    font-family: 'DFMing', sans-serif;
+    font-weight: 800 !important;
+}
+.overlay_top{
+    z-index: 100000;
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 90px;
+    box-shadow: 0px 4px 7.4px 0px rgba(0, 0, 0, 0.25);
+}
+.overlay_top img{
+    width: 100%;
+}
+.overlay_UI{
+    z-index: 100000;
+    position: fixed;
+    top: 50%;
+    right:24px;
+    transform: translateY(-50%);
+
+    background: rgba(255, 255, 255, 0.90);
+    width: 90px;
+    height: 400px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0px 4px 7.4px 0px rgba(0, 0, 0, 0.25);
+}
+.btn_font{
+    font-size: 24px !important;
+    font-style: normal;
+    font-weight: 800;
+    letter-spacing: 4px;
+    writing-mode: vertical-lr;
+    text-align: center;
+}
+.overlay_btn1{
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    border-bottom: 4px solid #182985;
+}
+.overlay_btn2{
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    border-top: 4px solid #DF2535;
+}
+.overlay_UI img{
+    width: 36px;
+}
+.yellow{
+    color: #FAEC21;
+}
+.gray{
+    color: #BDD8E0;
+}
+.blue{
+    color: #182985 !important;
+}
+.red{
+    color: #DF2535;
+}
+.black{
+    color: #000;
+}
+a{
+    font-family: 'DFHei', sans-serif !important;
+}
+a:hover{
+    color: #236A84 !important;
+}
+
+.bg-color{
+    background-color: #F8F7F6 !important;
+    background: #F8F7F6 !important;
+}
+.wrapper{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+/* HEADER相關 */
+.header{
+    position: sticky;
+    transition: all 300ms;
+    height: 100px;
+    background: #FFF;
+    top:0;
+    z-index: 100000;
+}
+.mobile-overlay{
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.50);
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row-reverse;
+    display: none;
+    overflow: hidden;
+}
+.mobile-header-gp{
+    height: 100%;
+    display: none;
+}
+.mobile-menu{
+    display: flex;
+    flex-direction: column; /* 垂直布局 */
+    height: 100%;
+    width: 60vw;
+    background: #FFF;
+}
+.mobile-menu-header{
+    padding: 0px 16px;
+    border-bottom: 1px solid #C2C2C2;
+    height: 100px;
+    min-height: 60px;
+    display: flex;
+    justify-content: flex-end;
+}
+.mobile-header-gp-links{
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; /* 垂直方向滚动 */
+}
+.mobile-header-gp-links-gradeGp{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+.mobile-header-gp-links a,.mobile-header-gp-list{
+    padding: 16px 16px;
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    font-style: normal;
+}
+.mobile-header-gp-links-gradeGp-items{
+    display: flex;
+    flex-direction: column;
+    gap:0;
+    display: none;
+    background: #EFEFEF;
+    padding: 10px 0;
+}
+.pc-header-gp{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.pc-header-gp-links{
+    gap: 36px;
+}
+.pc-header-gp-links a,div{
+    font-family: 'DFHei', sans-serif;
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    font-style: normal;
+    display: flex;
+}
+.pc-header-gp-links-gradeGp{
+    position: relative;
+}
+.pc-header-gp-links-gradeGp-items{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-auto-flow: dense;
+    position: absolute;
+    top: 36px;
+    right: 0;
+    max-width: 500px;
+    background-color: #FFF;
+    border-radius: 8px;
+    box-shadow: 0px 4px 20.8px 0px rgba(0, 0, 0, 0.25);
+    flex-direction: column;
+    display: none;
+}
+.pc-header-gp-links-gradeGp-items {
+    display: grid;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+    pointer-events: none; /* 防止交互 */
+}
+.pc-header-gp-links-arrow{
+    transition: transform 0.3s;
+}
+/* header區域 */
+.subtitle_item{
+    z-index: 10;
+    height: 200px;
+    display: flex;
+    justify-content: right;
+    align-items: end;
+    position: relative;
+}
+.subtitle_item_Main{
+    position: absolute;
+    right: 0px;
+    height: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: end;
+}
+.subtitle_item_Main_font{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding-bottom: 16px;
+}
+.subtitle_item_Main_pic{
+    height: 200px;
+    width: 150px;
+    position: relative;
+    z-index: 3;
+}
+.subtitle_item_Main_pic img{
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -36px;
+}
+.S1_visual{
+    z-index: 2;
+    position: relative;
+    height: 935px;
+    background-image: radial-gradient(52.59% 53.31% at 47.11% 64.41%, #D1E8EE 1%, #CAE4EA 8%, #B6D8E1 19%, #96C4D1 32%, #69A9BB 47%, #60A3B6 49%, #5599AE 63%, #377E97 88%, #256E8A 100%);
+    display: flex;
+    flex-direction: column;
+}
+.S1_bg_bottom{
+    display: block;
+    width:140vw;
+}
+.S1_bg_bottom_GP{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -30vmin;
+    display: flex;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+    justify-content: center;
+}
+.S1_gp{
+    height: 100%;
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+.S1_titlegp{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.titlegp_colorGP{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.titlegp_colorgp:nth-child(1){
+    width: 100%;
+    height: 4px;
+    background-color: #DF2535; 
+}
+.titlegp_colorgp:nth-child(2){
+    width: 100%;
+    height: 4px;
+    background-color: #FFF; 
+}
+.titlegp_colorgp:nth-child(3){
+    width: 100%;
+    height: 4px;
+    background-color: #2D5992; 
+}
+.S1_gp_mainpic{
+    width: 80vmin;
+    z-index: 10;
+}
+.S1_itemGP{
+    display: flex;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20PX;
+    z-index: 10000;
+}
+.S1_kmts{
+    display: block;
+    width: 248px;
+    height: 78px;
+    background-image: url(../image/kmts_1.png) !important;
+    background-size: contain;
+}
+.S1_kmts:hover{
+    background-image: url(../image/kmts_2.png) !important;
+    background-size: contain;
+}
+.S1_timer{
+    position: relative;
+}
+.S1_num_group{
+    position: absolute;
+    top:53%;
+    left: 51%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 28px;
+}
+.S1_timer_font{
+    display: flex;
+    color: #FFF !important;
+    font-family: 'DFHei', sans-serif;
+    font-size: 52px !important; 
+    font-weight: 500 !important;
+    text-align: center;
+    letter-spacing: 6px;
+}
+.S2_video{
+    position: relative;
+    height: 800px;
+    background: linear-gradient(180deg, #236A84 0%, #4B869C 7.1%, #EDF5F8 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.S2_bg_bottom{
+    display: block;
+    height: 400px;
+}
+.S2_bg_bottom_GP{
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    overflow-x: hidden;
+}
+.S2_videoZone{
+    margin-top: 36px;
+    padding: 16px;
+    height: 50vmin;
+    width: 800px;
+    max-width: 100vw;
+    z-index: 333;
+}
+.S2_videoZone_shape{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(90deg, #DE9F17 0%, #FFF68A 54%, #FFCF45 100%);
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 24px;
+    padding: 16px;
+}
+.S2_videoZone_inner{
+    width: 100%;
+    padding: 16px;
+    background-color: #FFF;
+    border-radius: 24px;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
+}
+.S2_subAnchor{
+    width: 80vmin;
+    position: absolute;
+    top: 2vmin;
+    left: 0;
+}
+.Sgp_anchor{
+    top: 40px;
+    width: 60vw;
+    position: absolute;
+    left: 0;
+}
+.Sgp_anchor2{
+    top: 40px;
+    width: 40vw;
+    position: absolute;
+    left: 0;
+}
+.Sgp{
+    position: relative;
+    height: 270px;
+    background-color: #EDEDE3;
+}
+.Sgp_label{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 16vmin;
+}
+.Sgp_label img{
+    height: 16vmin;
+    position: absolute;
+    right: 0;
+    top: -50%;
+}
+.maincolor_block{
+    position: relative;
+    height: 800px;
+    background: linear-gradient(180deg, #236A84 0%, #4B869C 7.1%, #EDF5F8 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.maincolor_bg_bottom_GP{
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    overflow-x: hidden;
+}
+.maincolor_bg_bottom{
+    display: block;
+    height: 400px;
+}
+.maincolor_block_Main{
+    z-index: 100;
+    max-width: 100%;
+    padding: 16px;
+}
+.maincolor_block_Main img{
+    width: 100%;
+}
+.white_block{
+    position: relative;
+    height: 800px;
+    background-color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.white_block_with_link{
+    position: relative;
+    height: 1000px;
+    background-color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.white_bg_bottom{
+    display: block;
+    height: 400px;
+}
+.white_bg_bottom_GP{
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    overflow-x: hidden;
+}
+.carousel-item img {
+    max-width: 1000px;
+    width: 100%;
+    height: auto; /* or you could use a fixed height */
+    -webkit-transition: transform 0.5s ease;
+    transition: transform 0.5s ease;
+}
+.btn-group{
+    width: 600px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 60px;
+    z-index: 10;
+    border-bottom: 2px solid #236B84;
+}
+.btn-group .Btn{
+    padding: 16px 24px;
+    background-image: linear-gradient(61deg, #236A84 0%, #256C85 27%, #2E728A 43%, #3C7C93 56%, #508A9F 68%, #6A9DAE 78%, #8AB3C1 88%, #AFCED8 97%, #BDD8E0 100%);
+    color: #FFF;
+}
+.Btn.selected {
+    /* 选中时的样式 */
+    color: #236B84 !important;
+    background-image: none !important;
+}
+#myCarousel{
+    max-width: 1000px;
+    width: 1000px;
+}
+#my2Carousel{
+    max-width: 1000px;
+    width: 1000px;
+}
+#my3Carousel{
+    max-width: 1000px;
+    width: 1000px;
+}
+#my3Carousel{
+    display: flex;
+    flex-direction: column;
+
+}
+.carousel_btn_gp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
+}
+.carousel_Btn{
+    padding: 12px 24px;
+    border-radius: 140px;
+    border: 2px solid #153D80;
+    background: #FFF;
+    box-shadow: 4px 4px 0px 0px #153D80;
+    color: #153D80;
+}
+.carousel_Btn:hover{
+    padding: 12px 24px;
+    border-radius: 140px;
+    border: 2px solid #153D80;
+    background: #153D80;
+    box-shadow: 4px 4px 0px 0px #FFF;
+    color: #FFF;
+}
+/* 确保轮播容器相对定位 */
+.carousel {
+    position: relative;
+  }
+  
+  /* 左右控制图标绝对定位相对于轮播容器 */
+  .carousel-control-prev,
+  .carousel-control-next {
+    position: absolute;
+    top: 50%; /* This positions the controls vertically centered */
+    width: auto; /* Adjust the width as necessary */
+    height: auto; /* Adjust the height as necessary */
+  }
+  
+  /* 左控制图标位置 */
+  .carousel-control-prev {
+    left: 0; /* Adjust as necessary */
+    transform: translateY(-50%);
+  }
+  
+  /* 右控制图标位置 */
+  .carousel-control-next {
+    right: 0; /* Adjust as necessary */
+    transform: translateY(-50%);
+  }
+  
+  /* 调整图标大小和背景 */
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 48px; /* Your desired width */
+    height: 42px; /* Your desired height */
+    background-size: 100%;
+    background-image: none; /* Remove the default arrows if you are using custom images */
+  }
+  .footer{
+    background-color: #BDD8E1;
+    display: flex;
+    flex-direction: column;
+  }
+  .footer_gp{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  .footer_bottom_color{
+    background-color: #236B84;
+    height: 16px;
+  }
+  .comapny_inform_social_gp{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-right: 36px;
+    border-right: #000 solid 1px;
+  }
+  .comapny_inform_address{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .comapny_inform_social{
+    display: flex;
+    gap: 16px;
+  }
+  .footer_vertical{
+    display: flex;
+    gap: 16px;
+  }
+  .footer_font{
+    display: inline;
+    margin-top: 24px;
+  }
+  .footer_font p{
+    display: inline !important;
+  }
+  @media only screen and (max-width : 1024px) {
+    .btn-group{
+        max-width: 100vw;
+    }
+    #myCarousel{
+        max-width: 100vw;
+    }
+    #my2Carousel{
+        max-width: 100vw;
+    }
+    #my3Carousel{
+        max-width: 100vw;
+    }
+    .S1_itemGP{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%);
+        transform: translateX(-50%);
+        top:36vmin;
+    }
+    .S1_gp{
+        padding: 16px;
+    }
+    .Sgp_anchor{
+        width:90vw;
+        position: absolute;
+        left: 0;
+    }
+    .Sgp_anchor2{
+        width:90vw;
+        position: absolute;
+        left: 0;
+    }
+}
+
+@media only screen and (max-width : 768px) {
+    .footer_vertical{
+        flex-direction: column;
+    }
+    .carousel_btn_gp{
+        flex-direction: column;
+    }
+    .S1_bg_bottom {
+        width: 200vw;
+    }
+    h1{
+        font-size: 8vmin !important; 
+    }
+    h2{
+        font-size: 28px !important; 
+    }
+    h3{
+        font-size: 4vmin !important;
+    }
+    .header{
+        height: 100px;
+    }
+    .pc-header-gp{
+        display: none;;
+    }
+    .mobile-header-gp{
+        display: flex;
+        padding: 0px 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center
+    }
+    .S1_itemGP{
+        position: absolute;
+        left: 50%;
+        transform: translateY(-50%);
+        transform: translateX(-50%);
+        top:52vmin;
+    }
+    .S1_gp_mainpic{
+        width: 100vmin;
+        z-index: 10;
+    }
+    .S1_gp{
+        padding: 16px;
+        overflow-x: hidden;
+    }.subtitle_item_Main_pic{
+        width: 120px;
+        height: 140px;
+    }
+    .subtitle_item_Main_pic img{
+        height: 140px;
+    }
+    /* 在這裡寫上當視窗寬度小於 1024px 時應用的 CSS 樣式 */
+}

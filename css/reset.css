@@ -1,0 +1,67 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+button {
+    background: none; /* 移除背景 */
+    color: inherit; /* 继承字体颜色 */
+    border: none; /* 移除边框 */
+    padding: 0; /* 移除内边距 */
+    font: inherit; /* 继承字体样式 */
+    cursor: pointer; /* 可选：如果你想保持鼠标悬停时的手形指针 */
+    outline: inherit; /* 在某些浏览器中去除点击时的轮廓 */
+}
+button:hover{
+    border:none;
+    background: none; /* 移除背景 */
+    color: inherit; /* 继承字体颜色 */
+    border: none; /* 移除边框 */
+    padding: 0; /* 移除内边距 */
+    font: inherit; /* 继承字体样式 */
+    cursor: pointer; /* 可选：如果你想保持鼠标悬停时的手形指针 */
+    outline: inherit; /* 在某些浏览器中去除点击时的轮廓 */
+}
