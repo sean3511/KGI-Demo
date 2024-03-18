@@ -679,6 +679,8 @@ a:hover{
   .footer_font p{
     display: inline !important;
   }
+
+
   @media only screen and (max-width : 1024px) {
     .btn-group{
         max-width: 100vw;
