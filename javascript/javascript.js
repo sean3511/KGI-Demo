@@ -124,3 +124,5 @@
         var initialActiveIndex = $('#my2Carousel .carousel-item.active').index();
         $('.bg3 .bgtn3').eq(initialActiveIndex).addClass('selected');
     });
+
+    
