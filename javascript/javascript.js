@@ -30,51 +30,97 @@
         }
     }
 
-    // 關於切換label
-    document.addEventListener('DOMContentLoaded', function() {
-        // 获取所有的.Btn元素
-        const btns = document.querySelectorAll('.bg1 .bgtn1');
-    
-        // 为每个按钮添加点击事件监听器
-        btns.forEach(function(btn) {
-            btn.addEventListener('click', function() {
-                // 先移除所有按钮的'selected'类
-                btns.forEach(b => b.classList.remove('selected'));
-                
-                // 给被点击的按钮添加'selected'类
-                btn.classList.add('selected');
-            });
+    $(document).ready(function () {
+        // 当点击.bgtn1时
+        $('.bg1 .bgtn1').click(function () {
+            // 移除其他所有.bgtn1的'selected'类，并给当前点击的.bgtn1添加'selected'类
+            $('.bg1 .bgtn1').removeClass('selected');
+            $(this).addClass('selected');
+            
+            // 获取data-slide-to属性的值，并触发轮播到对应的项
+            var slideIndex = $(this).data('slide-to');
+            $('#myCarousel').carousel(slideIndex);
         });
+    
+        // 当轮播项开始滑动时，这里可以保持空，因为.bgtn1的'selected'状态在点击时已经更新
+        $('#myCarousel').on('slide.bs.carousel', function (e) {
+            // 不需要在这里移除.bgtn1的'selected'类
+        });
+    
+        // 当轮播项完成滑动时，确认同步.bgtn1的'selected'状态
+        $('#myCarousel').on('slid.bs.carousel', function (e) {
+            // 获取当前激活的轮播项的索引
+            var activeIndex = $(this).find('.carousel-item.active').index();
+            // 移除所有.bgtn1的'selected'类，并给对应的.bgtn1添加'selected'类
+            $('.bg1 .bgtn1').removeClass('selected');
+            $('.bg1 .bgtn1').eq(activeIndex).addClass('selected');
+        });
+    
+        // 页面加载完成后，如果需要，可以在这里同步.bgtn1的'selected'状态以匹配当前激活的.carousel-item
+        var initialActiveIndex = $('#myCarousel .carousel-item.active').index();
+        $('.bg1 .bgtn1').eq(initialActiveIndex).addClass('selected');
     });
 
-    document.addEventListener('DOMContentLoaded', function() {
-        // 获取所有的.Btn元素
-        const btns = document.querySelectorAll('.bg2 .bgtn2');
-    
-        // 为每个按钮添加点击事件监听器
-        btns.forEach(function(btn) {
-            btn.addEventListener('click', function() {
-                // 先移除所有按钮的'selected'类
-                btns.forEach(b => b.classList.remove('selected'));
-                
-                // 给被点击的按钮添加'selected'类
-                btn.classList.add('selected');
-            });
+    $(document).ready(function () {
+        // 当点击.bgtn1时
+        $('.bg2 .bgtn2').click(function () {
+            // 移除其他所有.bgtn1的'selected'类，并给当前点击的.bgtn1添加'selected'类
+            $('.bg2 .bgtn2').removeClass('selected');
+            $(this).addClass('selected');
+            
+            // 获取data-slide-to属性的值，并触发轮播到对应的项
+            var slideIndex = $(this).data('slide-to');
+            $('#my2Carousel').carousel(slideIndex);
         });
+    
+        // 当轮播项开始滑动时，这里可以保持空，因为.bgtn1的'selected'状态在点击时已经更新
+        $('#my2Carousel').on('slide.bs.carousel', function (e) {
+            // 不需要在这里移除.bgtn1的'selected'类
+        });
+    
+        // 当轮播项完成滑动时，确认同步.bgtn1的'selected'状态
+        $('#my2Carousel').on('slid.bs.carousel', function (e) {
+            // 获取当前激活的轮播项的索引
+            var activeIndex = $(this).find('.carousel-item.active').index();
+            // 移除所有.bgtn1的'selected'类，并给对应的.bgtn1添加'selected'类
+            $('.bg2 .bgtn2').removeClass('selected');
+            $('.bg2 .bgtn2').eq(activeIndex).addClass('selected');
+        });
+    
+        // 页面加载完成后，如果需要，可以在这里同步.bgtn1的'selected'状态以匹配当前激活的.carousel-item
+        var initialActiveIndex = $('#my2Carousel .carousel-item.active').index();
+        $('.bg2 .bgtn2').eq(initialActiveIndex).addClass('selected');
     });
 
-    document.addEventListener('DOMContentLoaded', function() {
-        // 获取所有的.Btn元素
-        const btns = document.querySelectorAll('.bg3.bgtn3');
-    
-        // 为每个按钮添加点击事件监听器
-        btns.forEach(function(btn) {
-            btn.addEventListener('click', function() {
-                // 先移除所有按钮的'selected'类
-                btns.forEach(b => b.classList.remove('selected'));
-                
-                // 给被点击的按钮添加'selected'类
-                btn.classList.add('selected');
-            });
+
+
+    $(document).ready(function () {
+        // 当点击.bgtn1时
+        $('.bg3 .bgtn3').click(function () {
+            // 移除其他所有.bgtn1的'selected'类，并给当前点击的.bgtn1添加'selected'类
+            $('.bg3 .bgtn3').removeClass('selected');
+            $(this).addClass('selected');
+            
+            // 获取data-slide-to属性的值，并触发轮播到对应的项
+            var slideIndex = $(this).data('slide-to');
+            $('#my3Carousel').carousel(slideIndex);
         });
+    
+        // 当轮播项开始滑动时，这里可以保持空，因为.bgtn1的'selected'状态在点击时已经更新
+        $('#my3Carousel').on('slide.bs.carousel', function (e) {
+            // 不需要在这里移除.bgtn1的'selected'类
+        });
+    
+        // 当轮播项完成滑动时，确认同步.bgtn1的'selected'状态
+        $('#my3Carousel').on('slid.bs.carousel', function (e) {
+            // 获取当前激活的轮播项的索引
+            var activeIndex = $(this).find('.carousel-item.active').index();
+            // 移除所有.bgtn1的'selected'类，并给对应的.bgtn1添加'selected'类
+            $('.bg3 .bgtn3').removeClass('selected');
+            $('.bg3 .bgtn3').eq(activeIndex).addClass('selected');
+        });
+    
+        // 页面加载完成后，如果需要，可以在这里同步.bgtn1的'selected'状态以匹配当前激活的.carousel-item
+        var initialActiveIndex = $('#my2Carousel .carousel-item.active').index();
+        $('.bg3 .bgtn3').eq(initialActiveIndex).addClass('selected');
     });
