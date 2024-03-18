@@ -474,7 +474,7 @@ a:hover{
 .maincolor_block{
     position: relative;
     height: 800px;
-    background: linear-gradient(180deg, #236A84 0%, #4B869C 7.1%, #EDF5F8 100%);
+    background: linear-gradient(180deg, #FFF 0%, #D9E8ED 27.1%, #679AAD 100%);
     display: flex;
     align-items: center;
     justify-content: center;
