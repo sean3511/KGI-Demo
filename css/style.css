@@ -21,6 +21,14 @@ h1{
     font-weight: 500 !important;
     text-align: center;
 }
+.red,.font-left,.DFMing{
+    margin: 0;
+}
+.subtitle_item_Main h1{
+    font-size: 46px !important; 
+    font-weight: 800;
+    padding-bottom: 12px;
+}
 h2{
     color: #FFF;
     font-family: 'DFHei', sans-serif;
@@ -252,17 +260,15 @@ a:hover{
 /* header區域 */
 .subtitle_item{
     z-index: 10;
-    height: 200px;
-    display: flex;
-    justify-content: right;
-    align-items: end;
+    display: inline-block;
+    flex-direction: column;
     position: relative;
 }
 .subtitle_item_Main{
-    position: absolute;
-    right: 0px;
+    left: 200px;
     height: 100%;
     /* background-color: red; */
+    padding-left: 240px;
     display: flex;
     align-items: end;
 }
@@ -270,7 +276,7 @@ a:hover{
     display: flex;
     flex-direction: column;
     justify-content: end;
-    padding-bottom: 16px;
+
 }
 .subtitle_item_Main_pic{
     height: 200px;
@@ -309,8 +315,9 @@ a:hover{
     justify-content: center;
 }
 .S1_gp{
+    max-height: 100%;
     height: 100% !important;
-    padding: 48px;
+    padding: 56px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -321,8 +328,21 @@ a:hover{
     flex-direction: column;
     gap: 16px;
 }
-.titlegp_colorGP{
+.S2_anchor{
+    position: absolute;
+    left: 0;
+    top: 36px;
+}
+.titlegp_colorGP_s1{
     width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.titlegp_colorGP{
+    position: absolute;
+    height: 24px;
+    width: 100%;
+    bottom: -12px;
     display: flex;
     flex-direction: column;
 }
@@ -342,7 +362,7 @@ a:hover{
     background-color: #2D5992; 
 }
 .S1_gp_mainpic{
-    width: 70vmin;
+    width: 30vw;
     z-index: 10;
 }  
 .S1_itemGP{
@@ -390,7 +410,7 @@ a:hover{
 }
 .S2_video{
     position: relative;
-    height: 900px;
+    height: 1200px;
     background: linear-gradient(180deg, #236A84 0%, #4B869C 7.1%, #EDF5F8 100%);
     display: flex;
     align-items: center;
@@ -434,27 +454,9 @@ a:hover{
     border-radius: 24px;
     box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
 }
-.S2_subAnchor{
-    width: 80vmin;
-    position: absolute;
-    top: 2vmin;
-    left: 0;
-}
-.Sgp_anchor{
-    top: 40px;
-    width: 60vw;
-    position: absolute;
-    left: 0;
-}
-.Sgp_anchor2{
-    top: 40px;
-    width: 40vw;
-    position: absolute;
-    left: 0;
-}
 .Sgp{
     position: relative;
-    height: 270px;
+    height: 240px;
     background-color: #EDEDE3;
 }
 .Sgp_label{
@@ -504,7 +506,7 @@ a:hover{
 }
 .white_block{
     position: relative;
-    height: 800px;
+    height: 1000px;
     background-color: #FFF;
     display: flex;
     align-items: center;
@@ -695,6 +697,10 @@ a:hover{
     }
 
   @media only screen and (max-width : 1024px) {
+    .S1_gp_mainpic{
+        width: 70vmin;
+        z-index: 10;
+    }
     .btn-group{
         max-width: 100vw;
     }
@@ -716,8 +722,9 @@ a:hover{
         top:36vmin;
     }
     .S1_gp{
+
         height: 100% !important;
-        padding: 16px;
+        padding: 16px 16px 0;
     }
     .Sgp_anchor{
         width:90vw;
@@ -771,7 +778,7 @@ a:hover{
         top:52vmin;
     }
     .S1_gp_mainpic{
-        width: 100vmin;
+        width: 80vmin;
         z-index: 10;
     }
     .S1_gp{
@@ -779,12 +786,6 @@ a:hover{
 
         padding: 16px;
         overflow-x: hidden;
-    }.subtitle_item_Main_pic{
-        width: 120px;
-        height: 140px;
-    }
-    .subtitle_item_Main_pic img{
-        height: 140px;
     }
     /* 在這裡寫上當視窗寬度小於 1024px 時應用的 CSS 樣式 */
 }
