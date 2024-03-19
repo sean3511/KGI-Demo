@@ -583,12 +583,8 @@ a:hover{
     max-width: 1000px;
     width: 1000px;
 }
-#my3Carousel{
-    display: flex;
-    flex-direction: column;
-
-}
 .carousel_btn_gp{
+    z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -705,6 +701,12 @@ a:hover{
     }
 
   @media only screen and (max-width : 1024px) {
+    .maincolor_block_Main{
+        padding: 36px;
+    }
+    .pc_UI{
+        display: none;
+    }
     .S2_video{
         height: 130vmin;
     }
@@ -804,9 +806,8 @@ a:hover{
         top:36vmin;
     }
     .S1_gp{
-
         height: 100% !important;
-        padding: 16px 16px 0;
+        padding: 36px 16px 0;
     }
     .Sgp_anchor{
         width:90vw;
@@ -821,6 +822,10 @@ a:hover{
 }
 
 @media only screen and (max-width : 768px) {
+
+    .maincolor_block{
+        height: 600px;
+    }
     .overlay_UI::after{
         height: 60PX;
     }
@@ -862,7 +867,7 @@ a:hover{
         font-size: 28px !important; 
     }
     h3{
-        font-size: 4vmin !important;
+        font-size: 20px !important;
     }
     .header{
         height: 100px;
@@ -882,7 +887,7 @@ a:hover{
         left: 50%;
         transform: translateY(-50%);
         transform: translateX(-50%);
-        top:52vmin;
+        top:300px;
     }
     .S1_gp_mainpic{
         width: 80vmin;
@@ -890,9 +895,27 @@ a:hover{
     }
     .S1_gp{
         height: 100% !important;
-
-        padding: 16px;
-        overflow-x: hidden;
+        padding: 36px 16px 0;
     }
     /* 在這裡寫上當視窗寬度小於 1024px 時應用的 CSS 樣式 */
+}
+@media only screen and (max-width : 440px){
+    .maincolor_block_Main{
+        padding: 16px;
+    }
+    .S1_itemGP{
+        top:220px;
+    }
+    .S1_gp_mainpic{
+        width: 100vmin;
+        z-index: 10;
+    }
+    .spaceship{
+        width: 60px !important;
+        display: none;
+    }
+    .airplane{
+        width: 60px !important;
+        display: none;
+    }
 }
