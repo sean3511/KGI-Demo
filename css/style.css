@@ -561,6 +561,14 @@ a:hover{
     z-index: 10;
     border-bottom: 2px solid #236B84;
 }
+.Mbtn-group{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding: 36px 16px 0px;
+}
 .btn-group .Btn{
     padding: 16px 24px;
     background-image: linear-gradient(61deg, #236A84 0%, #256C85 27%, #2E728A 43%, #3C7C93 56%, #508A9F 68%, #6A9DAE 78%, #8AB3C1 88%, #AFCED8 97%, #BDD8E0 100%);
@@ -570,6 +578,35 @@ a:hover{
     /* 选中时的样式 */
     color: #236B84 !important;
     background-image: none !important;
+}
+.Mbtn-group .MBtn{
+    padding: 8px 24px;
+    border-radius: 140px;
+    border: 2px solid #153D80;
+    background: #FFF;
+    box-shadow: 4px 4px 0px 0px #153D80;
+    color: #153D80;
+}
+.MBtn.selected {
+    /* 选中时的样式 */
+    background-color: #153D80 !important;
+    color: white;
+    box-shadow:none
+}
+.MBtn:hover{
+      /* 选中时的样式 */
+      background-color: #153D80 !important;
+      color: white;
+      box-shadow:none
+}
+#MmyCarousel{
+    width: 85vw;
+}
+#Mmy2Carousel{
+    width: 85vw;
+}
+#Mmy3Carousel{
+    width: 85vw;
 }
 #myCarousel{
     max-width: 1000px;
@@ -690,6 +727,9 @@ a:hover{
     overflow: hidden;
     display: inline-block; /* 或其他適合你布局的显示模式 */
     }
+  .mobile_UI{
+    display: none;
+  }
 
     @keyframes moveGlow {
         0% {
@@ -701,6 +741,30 @@ a:hover{
     }
 
   @media only screen and (max-width : 1024px) {
+    .mobile_UI{
+        display: flex;
+    }
+    .white_block{
+        padding-top: 24px;
+        padding-bottom: 24px;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .white_block_with_link{
+        padding-top: 24px;
+        padding-bottom: 24px;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    h2{
+        font-size: 24px !important; 
+    }
     .maincolor_block_Main{
         padding: 36px;
     }
@@ -822,6 +886,14 @@ a:hover{
 }
 
 @media only screen and (max-width : 768px) {
+    .spaceship{
+        width: 80px !important;
+        display: none;
+    }
+    .airplane{
+        width: 80px !important;
+        display: none;
+    }
 
     .maincolor_block{
         height: 600px;
@@ -864,7 +936,7 @@ a:hover{
         font-size: 8vmin !important; 
     }
     h2{
-        font-size: 28px !important; 
+        font-size: 24px !important; 
     }
     h3{
         font-size: 20px !important;
@@ -900,6 +972,9 @@ a:hover{
     /* 在這裡寫上當視窗寬度小於 1024px 時應用的 CSS 樣式 */
 }
 @media only screen and (max-width : 440px){
+    h2{
+        font-size: 24px !important; 
+    }
     .maincolor_block_Main{
         padding: 16px;
     }
