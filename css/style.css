@@ -582,7 +582,7 @@ a:hover{
     padding: 24px 36px;
     background-image: linear-gradient(61deg, #236A84 0%, #256C85 27%, #2E728A 43%, #3C7C93 56%, #508A9F 68%, #6A9DAE 78%, #8AB3C1 88%, #AFCED8 97%, #BDD8E0 100%);
     color: #FFF;
-    font-size: 24px;
+    font-size: 20px;
 }
 .Btn.selected {
     /* 选中时的样式 */
