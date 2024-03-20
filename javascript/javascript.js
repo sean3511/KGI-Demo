@@ -39,16 +39,16 @@
             
             // 获取data-slide-to属性的值，并触发轮播到对应的项
             var slideIndex = $(this).data('slide-to');
-            $('#MmyCarousel').carousel(slideIndex);
+            $('#myCarousel').carousel(slideIndex);
         });
     
         // 当轮播项开始滑动时，这里可以保持空，因为.bgtn1的'selected'状态在点击时已经更新
-        $('#MmyCarousel').on('slide.bs.carousel', function (e) {
+        $('#myCarousel').on('slide.bs.carousel', function (e) {
             // 不需要在这里移除.bgtn1的'selected'类
         });
     
         // 当轮播项完成滑动时，确认同步.bgtn1的'selected'状态
-        $('#MmyCarousel').on('slid.bs.carousel', function (e) {
+        $('#myCarousel').on('slid.bs.carousel', function (e) {
             // 获取当前激活的轮播项的索引
             var activeIndex = $(this).find('.carousel-item.active').index();
             // 移除所有.bgtn1的'selected'类，并给对应的.bgtn1添加'selected'类
@@ -89,7 +89,7 @@
         });
     
         // 页面加载完成后，如果需要，可以在这里同步.bgtn1的'selected'状态以匹配当前激活的.carousel-item
-        var initialActiveIndex = $('#myCarousel .carousel-item.active').index();
+        var initialActiveIndex = $('#MmyCarousel .carousel-item.active').index();
         $('.Mbg1 .Mbgtn1').eq(initialActiveIndex).addClass('selected');
     });
 
