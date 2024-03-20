@@ -809,9 +809,10 @@ a:hover{
         padding-bottom: 12px;
     }
     .S2_anchor{
-        position: absolute;
+        position: absolute !important;
         left: 0;
         top: 100px;
+        bottom: auto !important;
     }
     .subtitle_item_Main_pic{
         height: 140px;
@@ -911,6 +912,16 @@ a:hover{
 }
 
 @media only screen and (max-width : 768px) {
+    .subtitle_item_Main_pic{
+        height: 160px;
+        width: 100px;
+    }
+    .subtitle_item_Main_pic img{
+        height: 160px;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -32px;
+    }
     .subtitle_item_Main{
         height: 100%;
         /* background-color: red; */
@@ -1016,11 +1027,11 @@ a:hover{
 }
 @media only screen and (max-width : 440px){
     .subtitle_item_Main_pic{
-        height: 120px;
+        height: 125px;
         width: 100px;
     }
     .subtitle_item_Main_pic img{
-        height: 120px;
+        height: 110px;
         left: 50%;
         transform: translateX(-50%);
         bottom: -26px;
@@ -1039,19 +1050,22 @@ a:hover{
     }
     .Sgp_label{
         position: absolute;
-        width: 300px;
-        right: -100px;
-        top: 12px;
+        width: 220px;
+        height: 40px;
+        top: 0px;
         height: 16vmin;
     }
     .Sgp_label img{
+        object-fit: cover;
+        object-position:left top;
         width: 100%;
+        height: 100%;
         position: absolute;
         right: 0;
         top: -50%;
     }
     .subtitle_item_Main h1{
-        font-size: 24px !important; 
+        font-size: 20px !important; 
         padding-bottom: 12px;
     }
     p{
