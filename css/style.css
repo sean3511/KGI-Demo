@@ -13,11 +13,12 @@ body {
     font-family: 'DFHei', sans-serif;
     background-color: #F8F7F6 !important;
     background: #F8F7F6 !important;
+    
 }
 h1{
     color: #FFF;
     font-family: 'DFHei', sans-serif;
-    font-size: 64px !important; 
+    font-size: 90px !important; 
     font-weight: 500 !important;
     text-align: center;
 }
@@ -25,7 +26,7 @@ h1{
     margin: 0;
 }
 .subtitle_item_Main h1{
-    font-size: 46px !important; 
+    font-size: 56px !important; 
     font-weight: 800;
     padding-bottom: 12px;
 }
@@ -38,16 +39,16 @@ h2{
 }
 h3{
     font-family: 'DFHei', sans-serif;
-    font-size: 28px !important;
+    font-size: 38px !important;
     font-weight: 500 !important;
     text-align: center;
 }
 p{
     color: #FFF;
     font-family: 'DFHei', sans-serif;
-    font-size: 18px !important;
+    font-size: 15px !important;
     font-style: normal;
-    line-height: 200% !important; /* 36px */
+    line-height: 140% !important; /* 36px */
     margin-bottom: 0 !important;
 }
 .font-left{
@@ -328,6 +329,13 @@ a:hover{
     flex-direction: column;
     gap: 16px;
 }
+.S1_titlegp h1{
+    display: flex;
+    flex-direction: column;
+    gap:12px;
+    position: relative;
+    margin-bottom: 20px;
+}
 .S2_anchor{
     position: absolute;
     left: 0;
@@ -469,12 +477,13 @@ a:hover{
 }
 .Sgp_label{
     position: absolute;
+    width: 600px;
     right: 0;
-    top: 0;
+    top: 10px;
     height: 16vmin;
 }
 .Sgp_label img{
-    height: 16vmin;
+    width: 100%;
     position: absolute;
     right: 0;
     top: -50%;
@@ -600,13 +609,13 @@ a:hover{
       box-shadow:none
 }
 #MmyCarousel{
-    width: 85vw;
+    width: 90vw;
 }
 #Mmy2Carousel{
-    width: 85vw;
+    width: 90vw;
 }
 #Mmy3Carousel{
-    width: 85vw;
+    width: 90vw;
 }
 #myCarousel{
     max-width: 1000px;
@@ -690,6 +699,9 @@ a:hover{
     padding-top: 48px;
     padding-bottom: 48px;
   }
+  .footer_font P{
+    font-weight: 800;
+  }
   .footer_bottom_color{
     background-color: #236B84;
     height: 16px;
@@ -741,6 +753,19 @@ a:hover{
     }
 
   @media only screen and (max-width : 1024px) {
+    .Sgp_label{
+        position: absolute;
+        width: 500px;
+        right: 0;
+        top: 24px;
+        height: 16vmin;
+    }
+    .Sgp_label img{
+        width: 100%;
+        position: absolute;
+        right: 0;
+        top: -50%;
+    }
     .mobile_UI{
         display: flex;
     }
@@ -780,7 +805,7 @@ a:hover{
         background-color: #EDEDE3;
     }
     .subtitle_item_Main h1{
-        font-size: 20px !important; 
+        font-size: 28px !important; 
         padding-bottom: 12px;
     }
     .S2_anchor{
@@ -886,6 +911,24 @@ a:hover{
 }
 
 @media only screen and (max-width : 768px) {
+    .subtitle_item_Main{
+        height: 100%;
+        /* background-color: red; */
+        padding-left: 4vw;
+    }
+    .Sgp_label{
+        position: absolute;
+        width: 400px;
+        right: 0;
+        top: 24px;
+        height: 16vmin;
+    }
+    .Sgp_label img{
+        width: 100%;
+        position: absolute;
+        right: 0;
+        top: -50%;
+    }
     .spaceship{
         width: 80px !important;
         display: none;
@@ -933,13 +976,13 @@ a:hover{
         width: 200vw;
     }
     h1{
-        font-size: 8vmin !important; 
+        font-size: 52px !important; 
     }
     h2{
         font-size: 24px !important; 
     }
     h3{
-        font-size: 20px !important;
+        font-size: 24px !important;
     }
     .header{
         height: 100px;
@@ -972,8 +1015,60 @@ a:hover{
     /* 在這裡寫上當視窗寬度小於 1024px 時應用的 CSS 樣式 */
 }
 @media only screen and (max-width : 440px){
+    .subtitle_item_Main_pic{
+        height: 120px;
+        width: 100px;
+    }
+    .subtitle_item_Main_pic img{
+        height: 120px;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -26px;
+    }
+    .subtitle_item {
+        z-index: 10;
+        display: inline-block;
+        flex-direction: column;
+        position: relative;
+        bottom: 20px;
+    }
+    .Sgp{
+        position: relative;
+        height: 120px;
+        background-color: #EDEDE3;
+    }
+    .Sgp_label{
+        position: absolute;
+        width: 300px;
+        right: -100px;
+        top: 12px;
+        height: 16vmin;
+    }
+    .Sgp_label img{
+        width: 100%;
+        position: absolute;
+        right: 0;
+        top: -50%;
+    }
+    .subtitle_item_Main h1{
+        font-size: 24px !important; 
+        padding-bottom: 12px;
+    }
+    p{
+        color: #FFF;
+        font-family: 'DFHei', sans-serif;
+        font-size: 14px !important;
+        font-style: normal;
+        line-height: 140% !important; 
+    }
+    h1{
+        font-size: 44px !important; 
+    }
     h2{
         font-size: 24px !important; 
+    }
+    h3{
+        font-size: 18px !important;
     }
     .maincolor_block_Main{
         padding: 16px;
@@ -992,5 +1087,15 @@ a:hover{
     .airplane{
         width: 60px !important;
         display: none;
+    }
+}
+@media only screen and (max-width : 390px){
+    h1{
+        font-size: 38px !important; 
+    }
+}
+@media only screen and (max-width : 360px){
+    h1{
+        font-size: 36px !important; 
     }
 }
