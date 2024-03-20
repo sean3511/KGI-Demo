@@ -893,7 +893,7 @@ a:hover{
         left: 50%;
         transform: translateY(-50%);
         transform: translateX(-50%);
-        top:36vmin;
+        top:360px;
     }
     .S1_gp{
         height: 100% !important;
@@ -912,6 +912,9 @@ a:hover{
 }
 
 @media only screen and (max-width : 768px) {
+    .S1_itemGP{
+        top:280px;
+    }
     .subtitle_item_Main_pic{
         height: 160px;
         width: 100px;
@@ -1088,7 +1091,7 @@ a:hover{
         padding: 16px;
     }
     .S1_itemGP{
-        top:220px;
+        top:280px;
     }
     .S1_gp_mainpic{
         width: 100vmin;
