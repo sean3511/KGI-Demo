@@ -30,6 +30,9 @@ h1{
     font-weight: 800;
     padding-bottom: 12px;
 }
+.footer_gp h3{
+    font-size: 16px !important;
+}
 h2{
     color: #FFF;
     font-family: 'DFHei', sans-serif;
@@ -47,10 +50,13 @@ h3{
 p{
     color: #FFF;
     font-family: 'DFHei', sans-serif;
-    font-size: 15px !important;
+    font-size: 18px !important;
     font-style: normal;
     line-height: 140% !important; /* 36px */
     margin-bottom: 0 !important;
+}
+.footer_vertical p{
+    font-size: 16px !important;
 }
 .font-left{
     text-align: left;
@@ -299,7 +305,7 @@ a:hover{
 .S1_visual{
     z-index: 2;
     position: relative;
-    height: 935px;
+    height: 100vh;
     background-image: radial-gradient(52.59% 53.31% at 47.11% 64.41%, #D1E8EE 1%, #CAE4EA 8%, #B6D8E1 19%, #96C4D1 32%, #69A9BB 47%, #60A3B6 49%, #5599AE 63%, #377E97 88%, #256E8A 100%);
     display: flex;
     flex-direction: column;
@@ -375,7 +381,7 @@ a:hover{
 }
 .S1_gp_mainpic{
     display: inline;
-    width: 500px;
+    width: 440px;
     z-index: 10;
 }  
 .S1_itemGP{
@@ -711,7 +717,7 @@ a:hover{
   }
   .footer_bottom_color{
     background-color: #236B84;
-    height: 16px;
+    height: 48px;
   }
   .comapny_inform_social_gp{
     display: flex;
@@ -731,7 +737,7 @@ a:hover{
   }
   .footer_vertical{
     display: flex;
-    gap: 16px;
+    gap: 18px;
   }
   .footer_font{
     display: inline;
@@ -789,6 +795,9 @@ a:hover{
   }
 
   @media only screen and (max-width : 1024px) {
+    .S1_visual{
+        height: 80vh;
+    }
     .S1_titlegp{
         gap: 0;
     }
@@ -1072,6 +1081,9 @@ a:hover{
     /* 在這裡寫上當視窗寬度小於 1024px 時應用的 CSS 樣式 */
 }
 @media only screen and (max-width : 440px){
+    .header{
+        height: 60px;
+    }
     .maincolor_block{
         height: 400px;
     }
@@ -1117,7 +1129,7 @@ a:hover{
     p{
         color: #FFF;
         font-family: 'DFHei', sans-serif;
-        font-size: 14px !important;
+        font-size: 17px;
         font-style: normal;
         line-height: 140% !important; 
     }
@@ -1134,7 +1146,7 @@ a:hover{
         padding: 16px;
     }
     .S1_itemGP{
-        top:280px;
+        top:200px;
     }
     .S1_gp_mainpic{
         width: 100vmin;
