@@ -42,6 +42,7 @@ h3{
     font-size: 38px !important;
     font-weight: 500 !important;
     text-align: center;
+    margin-bottom: 0;
 }
 p{
     color: #FFF;
@@ -133,6 +134,9 @@ p{
 }
 .black{
     color: #000;
+}
+.white{
+    color: #FFF;
 }
 a{
     font-family: 'DFHei', sans-serif !important;
@@ -318,7 +322,7 @@ a:hover{
 .S1_gp{
     max-height: 100%;
     height: 100% !important;
-    padding: 56px;
+    padding: 56px 0 144px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -332,9 +336,9 @@ a:hover{
 .S1_titlegp h1{
     display: flex;
     flex-direction: column;
-    gap:12px;
+    gap:8px;
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
 }
 .S2_anchor{
     position: absolute;
@@ -370,7 +374,8 @@ a:hover{
     background-color: #DF2535;  
 }
 .S1_gp_mainpic{
-    width: 30vw;
+    display: inline;
+    width: 500px;
     z-index: 10;
 }  
 .S1_itemGP{
@@ -538,6 +543,7 @@ a:hover{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding-top: 144px;
 }
 .white_bg_bottom{
     display: block;
@@ -576,7 +582,7 @@ a:hover{
     justify-content: center;
     gap: 16px;
     flex-wrap: wrap;
-    padding: 36px 16px 0px;
+    padding: 20px 16px 0px;
 }
 .btn-group .Btn{
     padding: 24px 36px;
@@ -743,17 +749,49 @@ a:hover{
   .mobile_UI{
     display: none;
   }
+    /* 時鐘元件 */
+    
+  .clock_bg{
+    border-radius: 16px;
+    background: linear-gradient(0deg, #215F76 0%, #215F76 100%), #FFF;
+    box-shadow: 6px 6px 0px 0px #1F4753;
 
-    @keyframes moveGlow {
-        0% {
-            background-position: 0% 0%; /* 从左上角开始 */
-        }
-        100% {
-            background-position: 100% 100%; /* 移动到右下角 */
-        }
-    }
+    display: flex;
+    padding: 16px 32px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .clock_time_gp{
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .time_gp_comp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+  .time_bottom{
+    display: flex;
+    padding: 2px;
+    align-items: flex-start;
+    gap: 2px;
+    background: #151515;
+  }
+  .time_bottom_bg{
+    padding: 4px;
+    background: linear-gradient(180deg, #282D2F 0%, #666 50%, #1D1D1D 100%);
+  }
+  .bank-size{
+    max-width: 1000px;
+  }
 
   @media only screen and (max-width : 1024px) {
+    .S1_titlegp{
+        gap: 0;
+    }
     .Sgp_label{
         position: absolute;
         width: 500px;
@@ -873,6 +911,7 @@ a:hover{
         box-shadow: 0px 4px 7.4px 0px rgba(0, 0, 0, 0.25);
     }
     .S1_gp_mainpic{
+        margin-bottom: 0px;
         width: 70vmin;
         z-index: 10;
     }
@@ -913,6 +952,9 @@ a:hover{
 }
 
 @media only screen and (max-width : 768px) {
+    /* .clock_bg{
+        padding: 8px 16px;
+      } */
     .S1_itemGP{
         top:280px;
     }
@@ -1030,6 +1072,9 @@ a:hover{
     /* 在這裡寫上當視窗寬度小於 1024px 時應用的 CSS 樣式 */
 }
 @media only screen and (max-width : 440px){
+    .maincolor_block{
+        height: 400px;
+    }
     .subtitle_item_Main_pic{
         height: 125px;
         width: 100px;
@@ -1054,19 +1099,16 @@ a:hover{
     }
     .Sgp_label{
         position: absolute;
-        width: 220px;
-        height: 40px;
-        top: 0px;
+        width: 200px;
+        right: 0;
+        top: 24px;
         height: 16vmin;
     }
     .Sgp_label img{
-        object-fit: cover;
-        object-position:left top;
         width: 100%;
-        height: 100%;
         position: absolute;
         right: 0;
-        top: -50%;
+        top: -40px;
     }
     .subtitle_item_Main h1{
         font-size: 20px !important; 
