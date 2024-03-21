@@ -305,7 +305,7 @@ a:hover{
 .S1_visual{
     z-index: 2;
     position: relative;
-    height: 100vh;
+    height: 935px;
     background-image: radial-gradient(52.59% 53.31% at 47.11% 64.41%, #D1E8EE 1%, #CAE4EA 8%, #B6D8E1 19%, #96C4D1 32%, #69A9BB 47%, #60A3B6 49%, #5599AE 63%, #377E97 88%, #256E8A 100%);
     display: flex;
     flex-direction: column;
@@ -795,9 +795,6 @@ a:hover{
   }
 
   @media only screen and (max-width : 1024px) {
-    .S1_visual{
-        height: 80vh;
-    }
     .S1_titlegp{
         gap: 0;
     }
