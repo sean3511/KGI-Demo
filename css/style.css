@@ -344,6 +344,7 @@ a:hover{
 }
 .S1_titlepic{
     width: 1200px;
+    z-index: 1000;
 }
 
 .S1_titlepic img{
