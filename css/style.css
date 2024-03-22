@@ -312,7 +312,7 @@ a:hover{
 }
 .S1_bg_bottom{
     display: block;
-    width:140vw;
+    width:100vw;
 }
 .S1_bg_bottom_GP{
     position: absolute;
@@ -1036,7 +1036,7 @@ a:hover{
         flex-direction: column;
     }
     .S1_bg_bottom {
-        width: 200vw;
+        width: 100vw;
     }
     h1{
         font-size: 52px !important; 
@@ -1078,6 +1078,23 @@ a:hover{
     /* 在這裡寫上當視窗寬度小於 1024px 時應用的 CSS 樣式 */
 }
 @media only screen and (max-width : 440px){
+      /* 左控制图标位置 */
+  .carousel-control-prev {
+    left: -10px; /* Adjust as necessary */
+    transform: translateY(-50%);
+  }
+  
+  /* 右控制图标位置 */
+  .carousel-control-next {
+    right: -10px; /* Adjust as necessary */
+    transform: translateY(-50%);
+  }
+      /* 调整图标大小和背景 */
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 30px; /* Your desired width */
+    height: 26px; /* Your desired height */
+  }
     .header{
         height: 60px;
     }
